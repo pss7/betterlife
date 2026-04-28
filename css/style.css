@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 공통 */
+#wrap{height: 100%; display: flex; flex-direction: column;}
+main{flex: 1;}
+body{background-color: #F9F9F9;}
+
+/* 가운데영역 */
+.container{padding: 0 20px;}
+
+/* 헤더 */
+#headerWrap{padding: 20px 0;}
+#headerWrap .headerBox{display: flex; justify-content: space-between; align-items: center;}
+#headerWrap .logoBox h1 a,
+#headerWrap .logoBox h1 a img{display: block;}
+#headerWrap .utilBox{display: flex; align-items: center; gap: 0 12px;}
+#headerWrap .utilBox .alarmBtn{width: 24px; height: 24px; background: url(../images/common/alarm_icon.svg)no-repeat center;}
+#headerWrap .utilBox .authBtn{padding: 4px 12px; border-radius: 4px; background-color: #0D1116; color: #fff; font-weight: 600; font-size: 14px;}
+
+/* 푸터 */
+#footerWrap .footerBox{padding: 10px 0;}
+#footerWrap .copyright{display: block; font-size: 12px; color: #999; text-align: center;}
+
+/* 배너영역 */
+.bannerBox .slide{padding: 0 20px;}
+.bannerBox{padding: 16px 0 10px; background-color: #A69A8C; border-radius: 6px;}
+.bannerBox p{font-size: 15px; color: #fff; font-weight: 500;}
+.bannerBox p strong{display: flex; align-items: center; gap: 4px; font-size: 18px;}
+.bannerBox p strong::after{content: ''; width: 16px; height: 16px; background: url(../images/main/arrow_icon01.svg)no-repeat center;}
+.bannerBox img{display: block;}
+.bannerBox .slideBox{margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+
+/* dots */
+.slick-dots{display: flex!important; flex-wrap: wrap; gap: 0 4px; align-items: center; justify-content: center; width: 100%;}
+.slick-dots li.slick-active button{background-color: #000; width: 14px;}
+.slick-dots li button{display: block; width: 6px; height: 6px; text-indent: -9999px; border-radius: 5px; background-color:#857B70; cursor: pointer;}

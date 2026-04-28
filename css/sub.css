@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* 공통 */
+.contentBox{padding: 20px 0;}
+
+/* 공통 - 버튼 */
+.btnBox{margin: 16px 0; display: flex; gap: 0 8px;}
+.btn{padding: 8px 16px; font-weight: 600; border-radius: 4px; }
+.btn.btnPrimary{background-color: #404040; color: #fff;}
+.btn.btnLine{border: 1px solid #E3E3E3; color: #767676; background-color: #fff;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+
+/* 게시판 - 상세 */
+.boardViewBox .boardViewTopBox{position: relative; padding-bottom: 16px;}
+.boardViewBox .boardViewTopBox h2{margin-bottom: 2px; font-weight: 600; color: #222; font-size: 16px;}
+.boardViewBox .boardViewPostOptionBox{position: absolute; top:0; right:0; }
+.boardViewBox .boardViewPostOptionBox .boardViewPostOptionBtn{width: 24px; height: 24px; background: url(../images/sub/option_icon.svg)no-repeat center;}
+.boardViewBox .boardViewPostOptionMenu{display: none; position: absolute; top:36px; right:0; border: 1px solid #E3E3E3; border-radius: 4px; overflow: hidden;}
+.boardViewBox .boardViewPostOptionMenu.active{display: block;}
+.boardViewBox .boardViewPostOptionMenu .boardViewPostOptionMenuBtn{width: 111px; height: 36px; background-color: #fff; border-bottom: 1px solid #E3E3E3; color: #000; font-weight: 500; font-size: 14px;}
+.boardViewBox .boardViewPostOptionMenu .boardViewPostOptionMenuBtn.edit{color: #000;}
+.boardViewBox .boardViewPostOptionMenu .boardViewPostOptionMenuBtn.delete{color: #FF3B30;}
+.boardViewBox .boardViewPostOptionMenu .boardViewPostOptionMenuBtn:last-child{border-bottom: 0;}
+.boardViewBox .boardViewPostInfoBox{display: flex; align-items: center; gap: 0 4px;}
+.boardViewBox .boardViewPostInfoBox span{font-weight: 500; color: #767676; font-size: 14px;} 
+.boardViewBox .boardViewPostInfoBox .author{position: relative; margin-right: 12px;}
+.boardViewBox .boardViewPostInfoBox .author::after {content: ''; position: absolute; top:8px; right:-10px; width: 4px; height: 4px; border-radius: 50%; background-color: #999;}
+.boardViewBox .boardViewContentBox{padding: 16px 0; border: 1px solid #E3E3E3; border-width: 1px 0;}
+.boardViewBox .boardViewContentBox p{color: #222;}
+
+/* 게시판 - 목록 */
+.boardTable{width: 100%; table-layout: fixed;}
+.boardTable thead tr th{padding: 0 4px; height: 44px; color: #767676; font-weight: 500; font-size: 14px; background-color: #F3F3F3; border: 1px solid #CBD1D8; border-width: 1px 0; text-align: left;}
+.boardTable tbody tr td{ padding: 12px 4px; font-weight:500; color: #424242; border-bottom: 1px solid #CBD1D8;}
+.boardTable tbody tr td a{display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+/* 공지 */
+.noticeList li{margin-bottom: 12px;}
+.noticeList li:last-child{margin-bottom: 0;}
+.noticeList li a{position: relative; display: block; padding: 20px 48px 20px 16px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); background-color: #fff;}
+.noticeList li a::after{content: ''; width: 20px; height: 20px; position: absolute; top:50%; right:16px; transform: translateY(-50%); background: url(../images/sub/arrow_icon01.svg)no-repeat center / contain;}
+.noticeList li a h2{display: flex; align-items: center; justify-content: flex-start;  flex-wrap: wrap; gap: 0 4px; margin-bottom: 8px; font-weight: 600; font-size: 18px; color: #222;}
+.noticeList li a p{font-weight: 500; color: #505050;}
+
+/* 로그인 */
+.loginBox{padding: 50px 0;}
+.loginBox .loginLogoBox{margin-bottom: 28px;}
+.loginBox .loginLogoBox img{display: block; max-width: 100%; margin: 0 auto 16px;}
+.loginBox .loginLogoBox h1{color: #424242; font-weight: 600; font-size: 20px; text-align: center;}
+.loginBox .inputBox{margin-bottom: 8px;}
+.loginBox .loginBtn{margin: 16px 0; width: 100%; display: flex; align-items: center; justify-content: center; height: 49px; border-radius: 6px; text-align: center; background-color: #404040; color: #fff; font-weight: 700; font-size: 18px;} 
+.loginBox .loginInfoText{font-size: 12px; font-weight: 500; color: #767676; text-align: center;}
+.loginBox .loginInfoText strong{display: block; font-size: 14px;}
+
+/* 폼 */
+input{width: 100%; padding:0 16px; height: 48px; border: 1px solid #E3E3E3; border-radius: 6px; font-weight: 500;}
+input::placeholder{color: #999;}
+input[type="checkBox"] + label{ position: relative; padding-left: 22px; color: #767676; font-weight: 500; font-size: 14px;}
+input[type="checkBox"] + label::before{content: ''; position: absolute; top:-1px; left:0; width: 16px; height: 16px; border: 1px solid #E3E3E3; border-radius: 2px; background-color: #fff;}
+input[type="checkBox"]:checked + label::before{background: #404040 url(../images/sub/chk_icon.svg)no-repeat center; border: 1px solid #404040;}
+
+/* 로그인 - 인증 */
+.certificationNumberBox .certificationNumberText{margin-bottom: 26px; font-weight: 700; font-size:24px; color: #222;}
+.certificationNumberBox .certificationNumberBox{display: flex; align-items: center; gap: 0 8px;}
+.certificationNumberBox .certificationNumberBox .certificationNumberBtn{display: flex; align-items: center; justify-content: center; width: 73px; height: 48px; border: 1px solid #404040; border-radius: 6px; color: #404040; font-weight: 500;}
+.certificationNumberBox .certificationNumberBox .inputBox{width: 100%; position: relative; margin: 0;}
+.certificationNumberBox .certificationNumberBox .inputBox input{padding:0 62px 0 16px;}
+.certificationNumberBox .certificationNumberBox .inputBox .authTime{position: absolute; top: 50%; transform: translateY(-50%); right:16px; color: #FF3B30; font-weight: 500; font-size: 14px;}
+.certificationNumberBox .logo{display: block; margin: 28px auto 0; max-width: 100%;}
+.prevPageLink{transform: rotate(-180deg); width: 24px; height: 24px; background: url(../images/sub/arrow_icon01.svg)no-repeat center / contain;}
+.certificationKeypadBox .authCodeDisplayBox{position: relative; padding: 5px 0; margin-bottom: 6px;}
+.certificationKeypadBox .authCodeDisplayBox::before{content: ''; position: absolute; top:50%; left:24px; margin-top: -12px; width: 1px; height: 24px; background-color: #999; }
+.certificationKeypadBox .authCodeDisplayBox::after{content: ''; position: absolute; top:50%; right:24px; margin-top: -12px; width: 1px; height: 24px; background-color: #999; }
+.certificationKeypadBox .authCodeDisplayBox .authCodeSource{display: block; font-size: 11px; color: #222; text-align: center;}
+.certificationKeypadBox .authCodeDisplayBox .authCodeNumber{display: block; font-size: 17px; color: #222; text-align: center;}
+.certificationKeypadBox {position: fixed; left:0; right:0; bottom: 0; padding: 0 8px 45px; background-color: #D1D3D9; z-index: 999;}
+.certificationKeypadBox .keypadNumberBox {display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 7px 5px;}
+.certificationKeypadBox .keypadBtn{padding-top: 3px; display: flex; flex-direction: column; height: 46px; border-radius: 4px; background-color: #f5f5f5; font-size: 25px; color: #222;
+}
+.certificationKeypadBox .keypadBtn .num{line-height: 1;}
+.certificationKeypadBox .keypadBtn .eng{font-size: 10px; font-weight: 700; color: #222; letter-spacing: 2px;}
+.certificationKeypadBox .keypadBtn.keypadZeroBtn{justify-content: center; }
+.certificationKeypadBox .keypadBtn.keypadDeleteBtn{justify-content: center; background: 0;}
+.certificationKeypadBox .keypadBtn.keypadDeleteBtn::before {content: "⌫"; font-size: 28px;}
+.certificationKeypadBox .keypadBtn:active {background-color: #e9e9e9;}
+.certificationKeypadBox .keypadBlank {background: transparent; pointer-events: none;}
+
+/* 공통 - 페이지네이션 */
+.paginationBox{margin: 60px 0 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap:0 4px;}
+.paginationBox .pageLink{padding: 0 4px; position: relative; display: flex; align-items: center; justify-content: center; min-width: 24px; min-height: 24px; border-radius: 6px; font-size: 14px; color: #424242;}
+.paginationBox .pageLink.active{color: #fff; background-color: #0D1116;}
+.paginationBox .pageLinkPrev{min-width: 32px; min-height: 32px; transform: rotate(180deg);  background: url(../images/sub/arrow_icon01.svg)no-repeat center / contain; background-size: 16px 16px;}
+.paginationBox .pageLinkNext{min-width: 32px; min-height: 32px; background: url(../images/sub/arrow_icon01.svg)no-repeat center / contain; background-size: 16px 16px;}
